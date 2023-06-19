@@ -1,6 +1,6 @@
 dist
 node_modules
 .yarn
-*.env
+.env.*
 build
 yarn.lock

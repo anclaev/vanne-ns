@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:5.60.0"],\
             ["@typescript-eslint/parser", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:5.60.0"],\
+            ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-prettier", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:8.8.0"],\
             ["eslint-plugin-prettier", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:4.2.1"],\
@@ -3659,6 +3660,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/create-require-npm-1.1.1-839884ca2e-a9a1503d43.zip/node_modules/create-require/",\
           "packageDependencies": [\
             ["create-require", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["cross-env", [\
+        ["npm:7.0.3", {\
+          "packageLocation": "./.yarn/cache/cross-env-npm-7.0.3-96d81820f4-26f2f3ea2a.zip/node_modules/cross-env/",\
+          "packageDependencies": [\
+            ["cross-env", "npm:7.0.3"],\
+            ["cross-spawn", "npm:7.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8508,6 +8519,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:5.60.0"],\
             ["@typescript-eslint/parser", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:5.60.0"],\
+            ["cross-env", "npm:7.0.3"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-prettier", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:8.8.0"],\
             ["eslint-plugin-prettier", "virtual:8428457d6c387f9d317a41a4c210f0d5a7a2c88806e19e63adab548c890859d464d4d111b6655720cf1322acffa312d23c70d0835b1047e7d7d9521643ba5594#npm:4.2.1"],\

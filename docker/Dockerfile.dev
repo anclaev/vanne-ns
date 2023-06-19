@@ -1,0 +1,29 @@
+ARG node_version=18.16.0
+
+# Stage 1: Установка зависимостей
+FROM node:${node_version} AS deps
+
+
+LABEL maintainer="anclaev<iahugo@yandex.ru>"
+LABEL description="Vanne NS"
+
+WORKDIR /home/node/vanne/api
+
+COPY . .
+
+ARG node_env=development
+ARG pg_user=local
+ARG pg_pass=local
+ARG api_port=3000
+
+ENV NODE_ENV=${node_env} 
+ENV PG_USER=${pg_user}
+ENV PG_PASS=${pg_pass}
+ENV APP_PORT=${api_port}
+
+RUN yarn install --silent
+
+EXPOSE ${APP_PORT}
+
+CMD ["yarn", "dev"]
+
