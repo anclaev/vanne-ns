@@ -8,11 +8,12 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "ci": "cross-env CI=true yarn lint && yarn test && yarn build",
+    "ci": "yarn lint && yarn test",
     "dev": "yarn start:development",
     "start": "nest start",
     "start:development": "cross-env NODE_ENV=development nest start --watch",
     "start:production": "node dist/main",
+    "deploy": "cross-env CI=true yarn build && yarn start:production",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
