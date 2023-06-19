@@ -19,7 +19,6 @@ export const validationSchema = Joi.object({
 
 export const options: ConfigModuleOptions = {
   isGlobal: true,
-  ignoreEnvFile: process.env.CI as unknown as boolean,
-  envFilePath: `.env.${process.env.NODE_ENV}`,
+  envFilePath: `.env.${process.env.NODE_ENV || 'development'}`,
   validationSchema,
 }
