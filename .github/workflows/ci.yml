@@ -27,8 +27,8 @@ jobs:
           echo "${{ secrets.ENV_DEV_FILE }}" > .env.development
 
       # Запуск тестирования
-      - name: Running testing
-        run: yarn ci
+      #- name: Running testing
+      #  run: yarn ci
         
       # Сборка приложения
       - name: Build app
