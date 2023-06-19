@@ -36,6 +36,7 @@ ARG api_port=3000
 ENV NODE_ENV=${node_env} 
 ENV PG_USER=${pg_user}
 ENV PG_PASS=${pg_pass}
+ENV APP_PORT=${api_port}
 
 COPY --from=deps /api/node_modules ./node_modules
 COPY --from=deps /api/package.json ./package.json
