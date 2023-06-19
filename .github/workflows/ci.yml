@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   testing:
@@ -17,19 +17,38 @@ jobs:
         with:
           node-version: 18.x
 
-      # Установка пакетов
-      - name: Install packages
+      - name: Установка зависимостей
         run: yarn install
-        
-      # Создание переменных окружения
-      - name: Create env
+
+      - name: Создание переменных окружеения
         run: |
           echo "${{ secrets.ENV_DEV_FILE }}" > .env.development
 
-      # Запуск тестирования
-      #- name: Running testing
+      #- name: Запуск тестов
       #  run: yarn ci
-        
+
       # Сборка приложения
-      - name: Build app
-        run: yarn deploy
+      - name: Сборка приложения
+        run: yarn build
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Клонирование репозитория
+        uses: actions/checkout@v3
+
+      - name: Авторизация в Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Сборка и пуш
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ../docker/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/vanne-ns:latest
+          build-args: ${{ secrets.ENV_DEV_FILE }}
