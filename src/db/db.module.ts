@@ -14,7 +14,7 @@ import { ConfigService } from '@common/services'
         username: config.val<string>('PG_USER'),
         password: config.val<string>('PG_PASS'),
         database: config.val<string>('PG_DB'),
-        entities: [__dirname + '/../**/*.entity.ts'],
+        entities: [__dirname + '/../**/*.entity.{js,ts}'],
         synchronize: true,
       }),
     }),
