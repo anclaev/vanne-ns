@@ -7,9 +7,16 @@ import { AppService } from './app.service'
 import { CommonModule } from '@common/common.module'
 
 import { options } from '@utils/config'
+import { DbModule } from './db/db.module'
+import { TeamsModule } from './teams/teams.module'
 
 @Module({
-  imports: [ConfigModule.forRoot(options), CommonModule],
+  imports: [
+    ConfigModule.forRoot(options),
+    CommonModule,
+    // DbModule
+    // TeamsModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
